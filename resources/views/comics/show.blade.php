@@ -11,7 +11,7 @@
           </div>
           <div class="col-7">
             <div class="card-body">
-              <h5 class="card-title">{{$book->title}}</h5>
+              <h4 class="card-title">{{$book->title}}</h4>
               <p class="card-text pt-3">{{$book->description}}</p>
             </div>
           </div>
