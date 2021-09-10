@@ -4,6 +4,19 @@
 @section('content')
 
 <div class="container pt-5">
+    
+    @if (session('edit'))
+        <div class="alert alert-success">
+            {{session('edit')}}
+        </div>    
+    @endif
+
+    @if (session('delete'))
+        <div class="alert alert-danger">
+            {{session('delete')}}
+        </div>    
+    @endif
+   
     <table class="table table-hover">
         <thead>
           <tr>

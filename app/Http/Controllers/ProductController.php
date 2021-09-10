@@ -88,7 +88,7 @@ class ProductController extends Controller
         $data=$request->all();
         $comic->update($data);
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('edit', 'Comic n. ' . $comic->id . ' has been updated.');
     }
 
     /**
@@ -100,6 +100,6 @@ class ProductController extends Controller
     public function destroy(Comic $comic)
     {
         $comic->delete();
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index')->with('delete','Comic n. ' . $comic->id . ' has been deleted.');
     }
 }

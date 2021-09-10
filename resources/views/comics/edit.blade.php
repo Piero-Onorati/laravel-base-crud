@@ -6,9 +6,9 @@
 
 <div class="container">
 
-    <h2>Modifica Prodotto {{$book->id}}</h2>
+    <h2 class="p-5">Modifica Prodotto {{$book->id}}</h2>
     
-    <form  action="{{route('comics.update',$book->id)}}" method="post" class="g-3 py-5">
+    <form  action="{{route('comics.update',$book->id)}}" method="post" class="g-3 row justify-content-center">
 
         {{-- Token --}}
         @csrf
@@ -57,8 +57,11 @@
             <input type="text" name="type" class="form-control" id="comic_type" value="{{$book->type}}">
         </div>
 
-      
-        <button type="submit" class="btn btn-secondary">Submit</button>
+        {{-- Button --}}
+        <div class="mb-3 col-10">
+            <button type="submit" class="btn btn-secondary">Edit item</button>
+        </div>
+
     </form>
 </div>
     
