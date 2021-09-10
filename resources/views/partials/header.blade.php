@@ -10,7 +10,7 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="{{route('homepage')}}">Home</a>
           <a class="nav-link" href="{{route('comics.index')}}">Comics</a>
-          <a class="nav-link" href="#">Add Comic</a>
+          <a class="nav-link" href="{{route('comics.create')}}">Add Comic</a>
         </div>
       </div>
     </div>

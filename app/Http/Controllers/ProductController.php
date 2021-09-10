@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -36,7 +36,20 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // inseriamo tutti i dati in una variabile
+        $data = $request->all();
+
+        // Creaiamo una istanza del Model
+        $newComic = new Comic();
+
+        // Associamo tutti i campi
+        $newComic->fill($data);
+
+        // Salvare
+        $newComic->save();
+
+        return redirect()->route('comics.show', $newComic->id);
+
     }
 
     /**
