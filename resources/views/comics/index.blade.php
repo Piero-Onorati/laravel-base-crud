@@ -21,7 +21,7 @@
                     <td>{{$book->type}}</td>
                     <td>
                         <a class="btn btn-primary" href="{{route('comics.show', $book->id)}}">Show</a>
-                        <a class="btn btn-secondary" href="">Edit</a>
+                        <a class="btn btn-secondary" href="{{route('comics.edit', $book->id)}}">Edit</a>
                         <a class="btn btn-danger" href="">Delete</a>
                     </td>
                 </tr>
